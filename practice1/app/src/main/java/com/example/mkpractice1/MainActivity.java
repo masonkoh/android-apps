@@ -16,9 +16,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button addBtn = (Button) findViewById(R.id.addBtn);
-        addBtn.setOnClickListener(new View.OnClickListener() {
+        addBtn.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 EditText firstNumEditText = (EditText) findViewById(R.id.firstNumEditText);
                 EditText secondNumEditText = (EditText) findViewById(R.id.secondNumEditText);
                 TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
                 int num1 = Integer.parseInt(firstNumEditText.getText().toString());
                 int num2 = Integer.parseInt(secondNumEditText.getText().toString());
                 int result = num1 + num2;
-                resultTextView.setText(result + "");
 
 
+                resultTextView.setText(Integer.toString(result));
             }
         });
     }
