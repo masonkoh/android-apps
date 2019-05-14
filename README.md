@@ -8,4 +8,5 @@
 ### What's in directories?
 |Dir Name|Description|Note|
 |----|----|----|
-|intent|basic intent usage|||
+intent|basic intent usage||
+||||
