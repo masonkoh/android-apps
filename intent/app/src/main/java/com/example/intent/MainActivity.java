@@ -19,13 +19,14 @@ public class MainActivity extends AppCompatActivity {
         Button page3Btn = (Button) findViewById(R.id.intentBtn3);
 
         final Toast toast = Toast.makeText(getApplicationContext(), "Jumping to intent pages ", Toast.LENGTH_SHORT);
-        final Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+
 
 
         page1Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toast.show();
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 startActivity(intent);
 
             }
@@ -34,12 +35,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 toast.show();
+                Intent intent = new Intent(MainActivity.this, Main3Activity.class);
+                startActivity(intent);
             }
         });
         page3Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toast.show();
+                Intent intent = new Intent(MainActivity.this, Main4Activity.class);
+                startActivity(intent);
             }
         });
     }
