@@ -1,5 +1,6 @@
 package com.example.intent;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,12 +17,17 @@ public class MainActivity extends AppCompatActivity {
         Button page1Btn = (Button) findViewById(R.id.intentBtn1);
         Button page2Btn = (Button) findViewById(R.id.intentBtn2);
         Button page3Btn = (Button) findViewById(R.id.intentBtn3);
-        final Toast toast = Toast.makeText(getApplicationContext(), "Hello Toast", Toast.LENGTH_SHORT);
+
+        final Toast toast = Toast.makeText(getApplicationContext(), "Jumping to intent pages ", Toast.LENGTH_SHORT);
+        final Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+
 
         page1Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toast.show();
+                startActivity(intent);
+
             }
         });
         page2Btn.setOnClickListener(new View.OnClickListener() {
